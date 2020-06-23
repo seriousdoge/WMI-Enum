@@ -95,14 +95,9 @@ namespace WMIConnect
                 }
 
                 //System.Console.WriteLine($"{q["Name"]}, {q["ProcessID"]}");
-
-                
-
-
+             
             }
-                  
-            
-        
+                         
         }
     }
 }
