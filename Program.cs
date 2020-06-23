@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Management;
@@ -21,19 +21,25 @@ namespace WMIConnect
             Dictionary<string, string> dlp = new Dictionary<string, string>();
             
 
-            edr.Add("cylanceui.exe", "Cylance");
-            edr.Add("cylancesvc.exe", "Cylance");
-            edr.Add("windowssensor.exe", "Falcon");
+            edr.Add("CylanceUI.exe", "Cylance");
+            edr.Add("SylanceSvc.exe", "Cylance");
+            edr.Add("WindowSsensor.exe", "Falcon");
             edr.Add("csagent.exe", "Falcon");
-            edr.Add("cb.exe", "Carbon Black");
-            edr.Add("fsm32.exe", "F-Secure");
+            edr.Add("Cb.exe", "Carbon Black");
+            edr.Add("FSM32.exe", "F-Secure");
             edr.Add("SentinelAgent.exe", "Sentinel One");
             edr.Add("CyveraConsole.exe", "Palo Alto");
             edr.Add("kavss.exe", "KasperSky");
             edr.Add("MsMpEng.exe", "Windows Defender");
+            edr.Add("dsa.exe", "Trend Micro");
+            edr.Add("socar.exe", "Symantec");
+            edr.Add("dsa_agent.exe", "Trend Micro");
+            edr.Add("SMC.exe", "Symantec");
+            edr.Add("SMCGui.exe", "Symantec");
+            edr.Add("bdss.exe", "Bitdefender");
             
-            
-            dlp.Add("svchost.exe", "");         
+            // to do
+            // dlp.Add("svchost.exe", "");         
 
 
             ConnectionOptions con = new ConnectionOptions();
@@ -82,7 +88,7 @@ namespace WMIConnect
 
                 }
 
-                foreach(var d in dlp.First().Value)
+                /* to do foreach(var d in dlp.First().Value)
                 {
                     bool match = d.Equals(q["Name"]);
                     
@@ -92,12 +98,12 @@ namespace WMIConnect
                         Console.WriteLine($"Found DLP: {d}");
                     }
 
-                }
+                } */
 
-                //System.Console.WriteLine($"{q["Name"]}, {q["ProcessID"]}");
-             
+                System.Console.WriteLine($"{q["Name"]}, {q["ProcessID"]}");
+
             }
-                         
+  
         }
     }
 }
