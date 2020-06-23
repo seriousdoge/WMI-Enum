@@ -12,7 +12,7 @@ namespace WMIConnect
         {
             if(args.Length != 4)
             {
-                Console.WriteLine("usage: enum_wmi.exe <username> <password> <IP> <domain_name>");
+                Console.WriteLine("Usage: enum_wmi.exe <username> <password> <IP> <domain_name>");
                 return; 
             }
             
@@ -31,7 +31,6 @@ namespace WMIConnect
             edr.Add("CyveraConsole.exe", "Palo Alto");
             edr.Add("kavss.exe", "KasperSky");
             edr.Add("MsMpEng.exe", "Windows Defender");
-            //edr.Add("msmpeng.exe", "Windows Defender");
             
             
             dlp.Add("svchost.exe", "");         
