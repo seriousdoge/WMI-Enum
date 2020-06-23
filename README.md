@@ -1,2 +1,2 @@
 # WMI-Enum
- C# code for WMI Enumeration.
+ C# POC code for remote process enumeration using WMI.
