@@ -59,21 +59,16 @@ namespace WMIConnect
 
             if (mscope.IsConnected == true)
             {
-                System.Console.WriteLine("Connection Successful!");
+                System.Console.WriteLine("Connection Successful! \n");
             }
             else
             {
-                System.Console.WriteLine("Connection Failed!");
+                System.Console.WriteLine("Connection Failed! \n");
             }
 
             ObjectQuery query = new ObjectQuery("Select * FROM Win32_Process");
-
-
             ManagementObjectSearcher searcher = new ManagementObjectSearcher(mscope, query);
-
             ManagementObjectCollection querycollection = searcher.Get();
-            
-            
             foreach(ManagementBaseObject q in querycollection)
             {
                 
@@ -84,10 +79,8 @@ namespace WMIConnect
                     
                     if(match)
                     {
-                        Console.WriteLine($"Found EDR:{c.Value}, Process Name:{c.Key}, Process ID:{q["ProcessID"]}");
-                        
+                        Console.WriteLine($"Found EDR:{c.Value}, Process Name:{c.Key}, Process ID:{q["ProcessID"]} \n\n");
                     }
-
                 }
 
                 /* to do foreach(var d in dlp.First().Value)
@@ -102,8 +95,11 @@ namespace WMIConnect
 
                 } */
 
-                System.Console.WriteLine($"{q["Name"]}, {q["ProcessID"]}");
+            }
 
+            foreach(var x in querycollection)
+            {
+                Console.WriteLine($"{x["Name"]} \t {x["ProcessID"]}");
             }
   
         }
