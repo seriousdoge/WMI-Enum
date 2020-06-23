@@ -37,6 +37,8 @@ namespace WMIConnect
             edr.Add("SMC.exe", "Symantec");
             edr.Add("SMCGui.exe", "Symantec");
             edr.Add("bdss.exe", "Bitdefender");
+            edr.Add("MsSense.exe", "Defender ATP");
+            edr.Add("xagt.exe", "FireEye");
             
             // to do
             // dlp.Add("svchost.exe", "");         
